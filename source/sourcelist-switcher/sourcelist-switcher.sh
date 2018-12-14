@@ -61,9 +61,9 @@ Q2() {
   esac
   url="https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/sourcelist-switcher/sources/ubuntu/xenial/$mirrors[$ans].txt"
   echo -e "Downding sourcelist ..."
-  sudo wget -q -O /etc/apt/sources.list.tmp $url 
-  sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
-  sudo mv /etc/apt/sources.list.tmp /etc/apt/sources.list
+  sudo wget -q -O /etc/apt/sources.list.tmp $url;
+  sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup;
+  sudo mv /etc/apt/sources.list.tmp /etc/apt/sources.list;
   echo -e "Successfully replace /etc/apt/sources.list"
   echo -e "The old version has been moved to /etc/apt/sources.list.back"
 }
