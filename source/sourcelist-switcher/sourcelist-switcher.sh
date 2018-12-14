@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
+echo -e "\e[36m*************************************************\033[0m"
+echo -e "\e[36m*              Sourcelist Switcher              *\033[0m"
+echo -e "\e[36m*  @auther: wang.yuanqiu007@gmail.com           *\033[0m"
+echo -e "\e[36m*  @github: https://github.com/vincent0700      *\033[0m"
+echo -e "\e[36m*************************************************\033[0m"
+
 # Step 1: Collecting system version.
-echo -e "\e[36mStep 1. Collecting your system infomation.\033[0m"
+echo -e "\r\n\e[36mStep 1. Collecting your system infomation.\033[0m"
 codename=$(lsb_release -a | grep -v LSB | grep Codename | awk '{print $2}')
 if [ $codename = "xenial" ]
 then
@@ -21,7 +27,7 @@ Q1() {
   read ans
   case $ans in
     y|"")
-      echo "Setting codename to $codename"
+      echo "Set codename to $codename"
       ;;
     n)
       echo "Thank you for using."
@@ -35,7 +41,7 @@ Q1() {
 Q1
 
 # Step 2: Choosing the mirror you want to use.
-echo -e "\r\n\e[36mStep 2. Choosing the mirror you want to use.\033[0m"
+echo -e "\r\n\e[36mStep 2. Select the mirror you want to use.\033[0m"
 mirrors=("aliyun" "official" "163" "tsinghua")
 echo $mirrors
 
@@ -77,6 +83,6 @@ Q2() {
 }
 Q2
 
-# Step 3: Updating ...
-echo -e "\r\n\e[36mStep 3. Updating ..."
+# Step 3: Execute apt update.
+echo -e "\r\n\e[36mStep 3. Execute apt update."
 sudo apt update
