@@ -12,7 +12,6 @@ if you want a new tool or a tool on a new platform.
 ## Documents
 
 ### `&0x01` <span id="doc-sourcelist-switcher">sourcelist-switcher</span>
-
 change source mirror to whatever you want
 
 
