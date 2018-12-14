@@ -13,7 +13,7 @@ if you want a new tool or a tool on a new platform.
 
 ### `&0x01` <span id="doc-sourcelist-switcher"><u>sourcelist-switcher</u></span>
 
-change source mirror to whatever you want
+change source mirror to whatever you want
 
 
 #### @use:
