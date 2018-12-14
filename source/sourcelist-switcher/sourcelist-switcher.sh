@@ -10,7 +10,7 @@ then
     xenial)
       ;;
     *)
-      echo "Not supported."
+      echo "\033[31m[Error] Codename not supported.\033[0m"
       exit 1
       ;;
   esac
@@ -59,11 +59,18 @@ Q2() {
       Q2
       ;;
   esac
-  url="https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/sourcelist-switcher/sources/ubuntu/xenial/$mirrors[$ans].txt"
+  mirror=${mirrors[$ans-1]}
+  url="https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/sourcelist-switcher/sources/ubuntu/xenial/$mirror.txt"
   echo -e "Downding sourcelist ..."
-  sudo wget -q -O /etc/apt/sources.list.tmp $url;
-  sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup;
-  sudo mv /etc/apt/sources.list.tmp /etc/apt/sources.list;
+  sudo wget -O "$file.tmp" $url;
+
+  file="/etc/apt/sources.list"
+  if [ ! -f "$file.tmp" ]; then
+    echo -e "\033[31m[Error] File not found.\033[0m"
+    exit 1
+  fi
+  sudo mv "$file" "$file.backup";
+  sudo mv "$file.tmp" "$file";
   echo -e "Successfully replace /etc/apt/sources.list"
   echo -e "The old version has been moved to /etc/apt/sources.list.back"
 }
