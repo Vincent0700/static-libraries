@@ -35,7 +35,7 @@ Q1() {
 Q1
 
 # Step 2: Choosing the mirror you want to use.
-echo -e "\e[36mStep 2. Choosing the mirror you want to use.\033[0m"
+echo -e "\r\n\e[36mStep 2. Choosing the mirror you want to use.\033[0m"
 mirrors=("aliyun" "official" "163" "tsinghua")
 echo $mirrors
 
@@ -50,10 +50,10 @@ Q2() {
   case $ans in
     1|"")
       ans=1
-      echo "Setting mirror to $ans"
+      echo "Setting mirror to ${mirrors[$ans-1]}"
       ;;
     2|3|4)
-      echo "Setting mirror to $ans"
+      echo "Setting mirror to ${mirrors[$ans-1]}"
       ;;
     *)
       Q2
@@ -78,5 +78,5 @@ Q2() {
 Q2
 
 # Step 3: Updating ...
-echo -e "\e[36mStep 3. Updating ..."
+echo -e "\r\n\e[36mStep 3. Updating ..."
 sudo apt update
