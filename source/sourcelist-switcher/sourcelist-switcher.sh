@@ -8,14 +8,15 @@ echo -e "\e[36m*************************************************\033[0m"
 
 # Step 1: Collecting system version.
 echo -e "\r\n\e[36mStep 1. Select your system version.\033[0m"
-versions=("xenial" "boinc" )
-paths=("ubuntu/xenial" "ubuntu/boinc")
+versions=("trusty" "xenial" "bionic" )
+paths=("ubuntu/trusty" "ubuntu/xenial" "ubuntu/bionic")
 
-echo -e "\033[32m[1]\033[0m ubuntu 16.04 xenial (default)"
-echo -e "\033[32m[2]\033[0m ubuntu 18.04 boinc"
+echo -e "\033[32m[1]\033[0m ubuntu 14.04 trusty (default)"
+echo -e "\033[32m[2]\033[0m ubuntu 16.04 xenial"
+echo -e "\033[32m[3]\033[0m ubuntu 18.04 bionic"
 
 Q1() {
-  echo -e "Which version is your system? (1/2)[1]: \c"
+  echo -e "Which version is your system? (1/2/3)[1]: \c"
   read ans
   case $ans in
     1|"")
@@ -42,7 +43,7 @@ echo -e "\033[32m[1]\033[0m aliyun (default)"
 echo -e "\033[32m[2]\033[0m official (us mirror)"
 echo -e "\033[32m[3]\033[0m 163"
 echo -e "\033[32m[4]\033[0m tsinghua"
-echo -e "\033[32m[4]\033[0m ustc"
+echo -e "\033[32m[5]\033[0m ustc"
 
 Q2() {
   echo -e "Which mirror you want to use? (1/2/3/4)[1]: \c"
