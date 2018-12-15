@@ -23,9 +23,9 @@ $ bash -c "$(wget -q -O - https://raw.githubusercontent.com/Vincent0700/static-l
 
 #### @support platform:
 
-- ubuntu 
-  - 16.04 xenial - [ aliyun | official | 163 | tsinghua | ustc ]
-  - 18.10 boinc - [ aliyun | official | 163 | tsinghua | ustc ]
+- ubuntu 14.04 trusty
+- ubuntu 16.04 xenial
+- ubuntu 18.04 boinc
 
 
 [1]: https://github.com/Vincent0700/static-libraries/issues/new
