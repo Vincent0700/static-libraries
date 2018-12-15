@@ -14,17 +14,17 @@ if you want a new tool or a tool on a new platform.
 ### `&0x01` <span id="doc-sourcelist-switcher">sourcelist-switcher</span>
 change source mirror to whatever you want
 
-
 #### @use:
 
 ```bash
+# please add sudo if you are not root
 $ bash -c "$(wget -q -O - https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/sourcelist-switcher/sourcelist-switcher.sh)"
 ```
 
 #### @support platform:
 
 - ubuntu 
-  - 16.04 xenial - [ official | aliyun | 163 | tsinghua ]
+  - 16.04 xenial - [ aliyun | official | 163 | tsinghua | ustc ]
 
 
 [1]: https://github.com/Vincent0700/static-libraries/issues/new
