@@ -20,10 +20,10 @@ Q1() {
   case $ans in
     1|"")
       ans=1
-      echo "You choose ${versions[$ans-1]}"
+      echo "You choose \033[45;37m${versions[$ans-1]}\033[0m"
       ;;
     2)
-      echo "You choose ${versions[$ans-1]}"
+      echo "You choose \033[45;37m${versions[$ans-1]}\033[0m"
       ;;
     *)
       Q1
@@ -50,10 +50,10 @@ Q2() {
   case $ans in
     1|"")
       ans=1
-      echo "You choose ${mirrors[$ans-1]}"
+      echo "You choose \033[45;37m${mirrors[$ans-1]}\033[0m"
       ;;
     2|3|4|5)
-      echo "You choose ${mirrors[$ans-1]}"
+      echo "You choose \033[45;37m${mirrors[$ans-1]}\033[0m"
       ;;
     *)
       Q2
@@ -73,7 +73,6 @@ Q2() {
   mv "$file.tmp" "$file";
 
   echo -e "Successfully replace /etc/apt/sources.list"
-  echo -e "The old version has been moved to /etc/apt/sources.list.back"
 }
 Q2
 
