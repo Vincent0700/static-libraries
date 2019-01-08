@@ -68,10 +68,6 @@ selected_mirror=$(IndexOf "$selected" "${mirrors[@]}")
 url="$reposUrl/${paths[$selected_os_version]}/${mirrors[$selected_mirror]}.txt"
 file="/etc/apt/sources.list"
 
-wget -q -O "$file.tmp" $url;
-if [ ! -f "$file.tmp" ]; then
-    echo -e "[Error] File not found."
-    exit 1
-fi
+wget -q -O $file $url;
 
 apt update
