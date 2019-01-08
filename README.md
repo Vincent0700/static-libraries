@@ -19,7 +19,7 @@ change source mirror to whatever you want
 ```bash
 # please add sudo if you are not root
 $ apt install wget apt-transport-https
-$ bash -c "$(wget -q -O - https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/sourcelist-switcher/sourcelist-switcher.sh)"
+$ bash -c "$(wget -q -O - https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/sourcelist-switcher/run.sh)"
 ```
 
 #### @support platform:
