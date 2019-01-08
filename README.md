@@ -14,12 +14,16 @@ if you want a new tool or a tool on a new platform.
 ### `&0x01` <span id="doc-sourcelist-switcher">sourcelist-switcher</span>
 change source mirror to whatever you want
 
+#### @dependencies
+
+```bash
+$ apt install wget apt-transport-https bc
+```
+
 #### @use:
 
 ```bash
 # please add sudo if you are not root
-$ apt install wget apt-transport-https
-$ apt install bc
 $ bash -c "$(wget -q -O - https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/sourcelist-switcher/run.sh)"
 ```
 
