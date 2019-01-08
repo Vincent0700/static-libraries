@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-isDev=true
+isDev=false
 
 basePath=$(cd `dirname $0`; pwd)
 reposUrl="https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/sourcelist-switcher"
