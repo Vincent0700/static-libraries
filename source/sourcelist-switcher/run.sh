@@ -32,7 +32,9 @@ for libpath in ${libs[@]}; do
     if [ "$isDev" = true ]; then
         source $basePath/$libpath
     else
-        source "$(wget -q -O - $reposUrl/$libpath)"
+        wget -q -O tmp.sh $reposUrl/$libpath
+        source tmp.sh
+        rm tmp.sh
     fi
 done
 
@@ -65,10 +67,11 @@ selected_mirror=$(IndexOf "$selected" "${mirrors[@]}")
 
 url="$reposUrl/${paths[$selected_os_version]}/${mirrors[$selected_mirror]}.txt"
 file="/etc/apt/sources.list"
+
 wget -q -O "$file.tmp" $url;
 if [ ! -f "$file.tmp" ]; then
-echo -e "\033[31m[Error] File not found.\033[0m"
-exit 1
+    echo -e "[Error] File not found."
+    exit 1
 fi
 
 apt update
