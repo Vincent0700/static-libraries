@@ -70,6 +70,6 @@ file="/etc/apt/sources.list"
 
 echo "Downloading from $url"
 wget -q -O $file $url;
-echo "Complete!"
 
+echo "Update sourcelist"
 apt update
