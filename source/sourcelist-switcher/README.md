@@ -4,8 +4,7 @@ change source mirror
 
 ## Feature
 
-![](https://raw.githubusercontent.com/Vincent0700/personal-image-hosting/master/images/static-libraries/libs-sourcelist-switcher_1.png)
-![](https://raw.githubusercontent.com/Vincent0700/personal-image-hosting/master/images/static-libraries/libs-sourcelist-switcher_2.png)
+![](https://raw.githubusercontent.com/Vincent0700/personal-image-hosting/master/images/static-libraries/libs-sourcelist-switcher.png)
 
 ## Dependencies
 
