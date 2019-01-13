@@ -4,7 +4,7 @@ set -e
 version=1.0.0
 
 echo ""
-echo "[Sourcelist Switcher] version $version"
+echo "[BestVim] version $version"
 echo "repos: https://github.com/Vincent0700/static-libraries/tree/master/source/bestvim"
 echo ""
 
