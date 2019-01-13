@@ -63,7 +63,7 @@ echo ""
 list_input "Choose your OS version." os_versions selected
 selected_os_version=$(IndexOf "$selected" "${os_versions[@]}")
 
-list_input "Choose your OS version." mirrors selected
+list_input "Choose mirror site." mirrors selected
 selected_mirror=$(IndexOf "$selected" "${mirrors[@]}")
 
 url="$reposUrl/${paths[$selected_os_version]}/${mirrors[$selected_mirror]}.txt"

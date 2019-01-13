@@ -2,6 +2,11 @@
 
 change source mirror
 
+## Feature
+
+![](https://raw.githubusercontent.com/Vincent0700/personal-image-hosting/master/images/static-libraries/libs-sourcelist-switcher_1.png)
+![](https://raw.githubusercontent.com/Vincent0700/personal-image-hosting/master/images/static-libraries/libs-sourcelist-switcher_2.png)
+
 ## Dependencies
 
 - apt-transport-https
@@ -11,7 +16,7 @@ change source mirror
 $ apt install wget apt-transport-https bc
 ```
 
-## Installation:
+## Installation
 
 ```bash
 $ sudo bash -c "$(wget -q -O - https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/sourcelist-switcher/run.sh)"
