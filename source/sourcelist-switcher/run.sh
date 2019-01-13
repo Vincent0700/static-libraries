@@ -69,8 +69,12 @@ selected_mirror=$(IndexOf "$selected" "${mirrors[@]}")
 url="$reposUrl/${paths[$selected_os_version]}/${mirrors[$selected_mirror]}.txt"
 file="/etc/apt/sources.list"
 
+echo ""
 echo "Downloading from $url"
 wget -q -O $file $url;
 
+echo ""
 echo "Update sourcelist"
+
+echo ""
 apt update
