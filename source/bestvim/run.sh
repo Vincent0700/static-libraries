@@ -13,5 +13,5 @@ vimrc="$reposUrl/.vimrc"
 file="~/.vimrc"
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-wget -q -O $file $url;
+wget -q -O $file $vimrc;
 vim +PluginInstall +qall
