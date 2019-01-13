@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+version=1.0.2
 isDev=false
 
 basePath=$(cd `dirname $0`; pwd)
@@ -56,7 +57,7 @@ function IndexOf() {
 }
 
 echo ""
-echo "[Sourcelist Switcher] version 1.0.1"
+echo "[Sourcelist Switcher] version $version"
 echo "repos: https://github.com/Vincent0700/static-libraries/tree/master/source/sourcelist-switcher"
 echo ""
 

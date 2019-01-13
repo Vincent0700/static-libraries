@@ -1,6 +1,6 @@
 # sourcelist-switcher
 
-change source mirror
+my ubuntu sourcelist switcher
 
 ## Feature
 
@@ -8,11 +8,12 @@ change source mirror
 
 ## Dependencies
 
+- wget
 - apt-transport-https
 - bc
   
 ```bash
-$ apt install wget apt-transport-https bc
+$ sudo apt install wget apt-transport-https bc
 ```
 
 ## Installation
