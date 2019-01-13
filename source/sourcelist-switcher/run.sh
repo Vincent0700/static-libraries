@@ -55,6 +55,7 @@ function IndexOf() {
     echo -1
 }
 
+echo ""
 echo "[Sourcelist Switcher] version 1.0.1"
 echo "repos: https://github.com/Vincent0700/static-libraries/tree/master/source/sourcelist-switcher"
 echo ""
