@@ -28,7 +28,7 @@ $ sudo bash -c "$(wget -q -O - https://raw.githubusercontent.com/Vincent0700/sta
 
 - [morhetz/gruvbox](https://github.com/morhetz/gruvbox)
 - [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)
-- [vim-airline/vim-airline-themes]](https://github.com/vim-airline/vim-airline-themes)
+- [vim-airline/vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 - [severin-lemaignan/vim-minimap](https://github.com/severin-lemaignan/vim-minimap)
 - [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
 - [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
