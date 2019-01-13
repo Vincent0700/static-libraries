@@ -12,6 +12,10 @@ reposUrl="https://raw.githubusercontent.com/Vincent0700/static-libraries/master/
 vimrc="$reposUrl/.vimrc"
 file="~/.vimrc"
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vundlePath="~/.vim/bundle/Vundle.vim"
+if [ ! -d $vundlePath ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git $vundlePath
+fi
+
 wget -q -O $file $vimrc;
 vim +PluginInstall +qall
