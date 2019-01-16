@@ -66,7 +66,7 @@ echo ""
 list_input "Choose your OS version." os_versions selected
 selected_os_version=$(IndexOf "$selected" "${os_versions[@]}")
 
-if [ "$selected" = "ubuntu_arm_16.04_xenial"]; then
+if [ "$selected" = "ubuntu_arm_16.04_xenial" ]; then
     mirrors=(
         "official"
         "tsinghua"
