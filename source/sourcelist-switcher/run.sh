@@ -15,11 +15,13 @@ os_versions=(
     "ubuntu_14.04_trusty"
     "ubuntu_16.04_xenial"
     "ubuntu_18.04_bionic"
+    "ubuntu_arm_16.04_xenial"
 )
 paths=(
     "sources/ubuntu/trusty" 
     "sources/ubuntu/xenial" 
     "sources/ubuntu/bionic"
+    "sources/ubuntu-arm/xenial"
 )
 mirrors=(
     "aliyun" 
@@ -63,6 +65,14 @@ echo ""
 
 list_input "Choose your OS version." os_versions selected
 selected_os_version=$(IndexOf "$selected" "${os_versions[@]}")
+
+if [ "$selected" = "ubuntu_arm_16.04_xenial"]; then
+    mirrors=(
+        "official"
+        "tsinghua"
+        "ustc"
+    )
+fi
 
 list_input "Choose mirror site." mirrors selected
 selected_mirror=$(IndexOf "$selected" "${mirrors[@]}")
