@@ -4,7 +4,7 @@ my ubuntu sourcelist switcher
 
 ## Feature
 
-![](https://raw.githubusercontent.com/Vincent0700/personal-image-hosting/master/images/static-libraries/libs-sourcelist-switcher.png)
+![](https://raw.githubusercontent.com/Vincent0700/personal-image-hosting/master/images/static-libraries/sourcelist-switcher.gif)
 
 ## Dependencies
 
