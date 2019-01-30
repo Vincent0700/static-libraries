@@ -27,3 +27,4 @@ $ sudo bash -c "$(wget -q -O - https://raw.githubusercontent.com/Vincent0700/sta
 - ubuntu 14.04 trusty
 - ubuntu 16.04 xenial
 - ubuntu 18.04 boinc
+- ubuntu-arm 16.04 xenial
