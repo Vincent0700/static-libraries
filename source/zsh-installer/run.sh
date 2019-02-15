@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install -y git zsh 
+sudo apt-get install -y git zsh wget
 chsh -s /bin/zsh
 
 # Install oh-my-zsh
@@ -14,7 +14,8 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 # Replace profile
-
+wget https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/zsh-installer/.zshrc -O ~/.zshrc
 
 # Enable changes
 source ~/.zshrc
+echo "Finsh."
