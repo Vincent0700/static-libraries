@@ -105,7 +105,7 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/zsh
 # Replace profile
 wget https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/zsh-installer/.zshrc -O ~/.zshrc
 
-sudo chown -R $0:$0 ~/.oh-my-zsh
-sudo chown $0:$0 ~/.zshrc
+sudo chown -R $1:$1 ~/.oh-my-zsh
+sudo chown $1:$1 ~/.zshrc
 
-sudo chsh -s /bin/zsh $0
+sudo chsh -s /bin/zsh $1
