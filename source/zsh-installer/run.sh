@@ -101,15 +101,10 @@ sudo main
 # ===== END INSTALL oh-my-zsh =====
 
 # Install Plugin: zsh-syntax-highlighting
-sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/zsh-syntax-highlighting
 
 # Install Plugin: zsh-autosuggestions
-sudo git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/zsh-autosuggestions
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/zsh-autosuggestions
 
 # Replace profile
 wget https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/zsh-installer/.zshrc -O ~/.zshrc
-
-sudo chown -R ${USER:=$(/usr/bin/id -run)}:$USER ~/.oh-my-zsh
-sudo chown $USER:$USER ~/.zshrc
-
-sudo chsh -s /bin/zsh $USER
