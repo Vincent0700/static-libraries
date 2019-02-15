@@ -7,8 +7,7 @@ chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install Plugin: zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 # Install Plugin: zsh-autosuggestions
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
@@ -18,4 +17,4 @@ wget https://raw.githubusercontent.com/Vincent0700/static-libraries/master/sourc
 
 # Enable changes
 source ~/.zshrc
-echo "Finsh."
+echo "Finish."
