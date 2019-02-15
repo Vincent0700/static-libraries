@@ -1,7 +1,6 @@
 #!/bin/bash
 
 sudo apt-get install -y git zsh wget curl
-sudo chsh -s /bin/zsh
 
 # ===== BEGIN INSTALL oh-my-zsh =====
 # https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
@@ -106,7 +105,9 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/zsh
 # Replace profile
 wget https://raw.githubusercontent.com/Vincent0700/static-libraries/master/source/zsh-installer/.zshrc -O ~/.zshrc
 
+sudo chsh -s /bin/zsh $USER
+
+sleep 1
 # Enable changes
-source ~/.zshrc
-env zsh -l
+zsh -l
 
