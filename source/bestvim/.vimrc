@@ -1,5 +1,5 @@
 filetype off
-syntax enable			
+syntax enable	
 syntax on
 
 set nocompatible		
@@ -13,19 +13,16 @@ set tabstop=4
 set shiftwidth=4
 set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()
+nmap <C-j> <c-w>j
+nmap <C-k> <c-w>k
+nmap <C-h> <c-w>h
+nmap <C-l> <c-w>l
 
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
-nmap <c-h> <c-w>h
-nmap <c-l> <c-w>l
+call vundle#begin()
 
 "@Plugin: vundle
 "--------------------------------------------------
 Plugin 'VundleVim/Vundle.vim'
-
-call vundle#end()         
-filetype plugin indent on   
 
 "@plugin: gruvbox
 "--------------------------------------------------
@@ -44,18 +41,43 @@ Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme = 'base16'
 let g:airline#extensions#tabline#enabled = 1
 
-"@plugin: minimap
+"@plugin: Yggdroot/indentLine
 "--------------------------------------------------
-Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'Yggdroot/indentLine'
 
-map <C-M> :MinimapToggle<CR>
+let g:indentLine_char = '┆'
+let g:indentLine_enabled = 1
+
+"@plugin: ryanoasis/vim-webdevicons
+"--------------------------------------------------
+Plugin 'ryanoasis/vim-webdevicons'
+
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
 
 "@plugin: nerdtree
 "--------------------------------------------------
 Plugin 'scrooloose/nerdtree'
 
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']	"忽略文件类型
-let NERDTreeWinSize=30							"窗口大小
+let NERDTreeIgnore =['\~$', '\.pyc$', '\.swp$']	"忽略文件类型
+let NERDTreeWinSize = 30							"窗口大小
+let NERDTreeShowBookmarks = 1
+let NERDTreeStatusline = "OUTLINE"
+
+let g:NERDTreeHidden =0
+let g:NERDTreeHighlightCursorline = 1
+let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '__pycache__']
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+autocmd vimenter * if !argc()|NERDTree|endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 map <C-B> :NERDTreeToggle<CR>
 
@@ -63,12 +85,42 @@ map <C-B> :NERDTreeToggle<CR>
 "--------------------------------------------------
 Plugin 'scrooloose/nerdcommenter'
 
-map <F4> <leader>ci <CR>
+map <C-L> <leader>ci
 
-"@plugin: nerdcommenter
+"@plugin: vim-nerdtree-syntax-highlight
 "--------------------------------------------------
-Plugin 'Yggdroot/indentLine'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-let g:indentLine_char = '┆'
-let g:indentLine_enabled = 1
+"let g:NERDTreeHighlightFolders = 1
+"let g:NERDTreeHighlightFoldersFullName = 1 
+"let g:NERDTreeExtensionHighlightColor = {}
+"let g:NERDTreeFileExtensionHighlightFullName = 1
+"let g:NERDTreeExactMatchHighlightFullName = 1
+"let g:NERDTreePatternMatchHighlightFullName = 1
 
+"@plugin: jistr/vim-nerdtree-tabs
+"--------------------------------------------------
+Plugin 'jistr/vim-nerdtree-tabs'
+
+let g:nerdtree_tabs_open_on_console_startup=1
+
+"@plugin: nerdtree-git-plugin
+"--------------------------------------------------
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+"let g:NERDTreeShowIgnoredStatus = 1
+let g:NERDTreeIndicatorMapCustom = { 
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+\ }
+
+call vundle#end()         
+filetype plugin indent on   
