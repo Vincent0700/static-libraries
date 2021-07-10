@@ -109,7 +109,7 @@ let g:nerdtree_tabs_open_on_console_startup=1
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 "let g:NERDTreeShowIgnoredStatus = 1
-let g:NERDTreeIndicatorMapCustom = { 
+let g:NERDTreeGitStatusIndicatorMapCustom = { 
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
